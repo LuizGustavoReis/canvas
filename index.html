@@ -17,13 +17,28 @@
 
             quadro.fillStyle ='rgba(0,0,200,0.3)';
             quadro.fillRect(40,40,80,80);
+            let height = 100 * Math.cos(Math.PI/6);
+
+            quadro.beginPath();
+            quadro.moveTo(100,300);//aonde começa
+            quadro.lineTo(300,300);//desenhando a linha partindo do move
+            quadro.lineTo(200,300 - height);
+            quadro.fill();//preencher
+
+
+            quadro.fillStyle = 'rgb(100,100,0)';
+            quadro.beginPath();
+            quadro.arc(300,300,50,0,Math.PI * 2,true);
+            quadro.stroke(); 
+
+            
         }
 
     }
     </script>
 </head>
-<body onload="desenhar()";>
-    <canvas style="border: 1px solid black " width = "300" height="300" id="canvas">
+<body onload="desenhar();">
+    <canvas style="border: 1px solid black " width = "500" height="500" id="canvas">
     
        navegador desatualizado
 
